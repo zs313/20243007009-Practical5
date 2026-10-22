@@ -1,6 +1,9 @@
 package com.example.practicalfive;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.net.Uri;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.widget.Button;
@@ -26,6 +29,8 @@ public class Municipality extends Activity {
         setContentView(R.layout.activity_municipality);
         UiInsets.apply(this, R.id.municipality_root);
         displayMunicipality(selectedMunicipality);
+        Button visitSite = findViewById(R.id.visit_site);
+        visitSite.setOnClickListener(view -> openOfficialWebsite());
     }
 
     private void displayMunicipality(String name) {
@@ -80,5 +85,34 @@ public class Municipality extends Activity {
         Button visitSite = findViewById(R.id.visit_site);
         visitSite.setBackgroundTintList(ColorStateList.valueOf(colour));
         visitSite.setTextColor(foreground);
+    }
+
+    private void openOfficialWebsite() {
+        String url;
+        switch (selectedMunicipality) {
+            case "Beijing":
+                url = "https://english.beijing.gov.cn/";
+                break;
+            case "Shanghai":
+                url = "https://english.shanghai.gov.cn/";
+                break;
+            case "Chongqing":
+                url = "https://english.cq.gov.cn/";
+                break;
+            case "Tianjin":
+                url = "https://en.tj.gov.cn/";
+                break;
+            default:
+                return;
+        }
+        // Leave the component unset so Android can choose a suitable browser.
+        Intent website = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        try {
+            startActivity(website);
+        } catch (ActivityNotFoundException unavailable) {
+            Toast.makeText(this, R.string.no_browser_error, Toast.LENGTH_LONG).show();
+        } catch (SecurityException blocked) {
+            Toast.makeText(this, R.string.website_unavailable_error, Toast.LENGTH_LONG).show();
+        }
     }
 }
