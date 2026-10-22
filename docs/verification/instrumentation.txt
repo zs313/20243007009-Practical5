@@ -1,0 +1,27 @@
+INSTRUMENTATION_STATUS: class=com.example.practicalfive.MunicipalityInstrumentation
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=MunicipalityInstrumentation
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: test=municipalityAcceptance
+INSTRUMENTATION_STATUS_CODE: 1
+PASS 1: TextProcessor accepts four cities and rejects invalid input
+PASS 2: Home rejects ''
+PASS 3: Home rejects '   '
+PASS 4: Home rejects 'Paris'
+PASS 5: Beijing Go navigation, content, image, color and website
+PASS 6: Beijing Done navigation with padded mixed-case input
+PASS 7: Shanghai Go navigation, content, image, color and website
+PASS 8: Shanghai Done navigation with padded mixed-case input
+PASS 9: Chongqing Go navigation, content, image, color and website
+PASS 10: Chongqing Done navigation with padded mixed-case input
+PASS 11: Tianjin Go navigation, content, image, color and website
+PASS 12: Tianjin Done navigation with padded mixed-case input
+PASS 13: Hardware Enter navigates exactly once
+PASS 14: Detail rejects missing/invalid extra: null
+PASS 15: Detail rejects missing/invalid extra: 
+PASS 16: Detail rejects missing/invalid extra:    
+PASS 17: Detail rejects missing/invalid extra: Paris
+PASS 18: Missing browser is handled without a crash
+PASS: 18 scenarios, 217 assertions.
+PASS: 18 scenarios, 217 assertions.
+

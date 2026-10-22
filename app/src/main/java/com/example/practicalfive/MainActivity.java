@@ -2,8 +2,10 @@ package com.example.practicalfive;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -18,6 +20,10 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         UiInsets.apply(this, R.id.main_root);
         municipalityInput = findViewById(R.id.municipality_input);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            // This search field does not collect a personal autofill value.
+            municipalityInput.setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_NO);
+        }
         municipalityInput.setOnEditorActionListener((view, actionId, event) -> {
             // Consume both hardware events, but navigate once on the initial key-down.
             if (event != null && event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {

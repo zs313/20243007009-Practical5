@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main_root"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/color_default_background" android:orientation="vertical">
+    android:orientation="vertical">
     <TextView android:layout_width="match_parent" android:layout_height="56dp"
         android:background="@color/color_accent" android:gravity="center_vertical"
         android:paddingStart="24dp" android:paddingEnd="24dp"
@@ -23,7 +23,7 @@
                 android:textSize="18sp" android:textStyle="bold" />
             <EditText android:id="@+id/municipality_input"
                 android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:minHeight="56dp" android:hint="@string/input_hint"
+                android:minHeight="56dp"
                 android:imeOptions="actionGo" android:inputType="textCapWords"
                 android:maxLength="80" android:maxLines="1" android:singleLine="true"
                 android:backgroundTint="@color/color_accent"

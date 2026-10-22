@@ -1,0 +1,30 @@
+[
+  {
+    "city": "Beijing",
+    "url_bar": "english.beijing.gov.cn",
+    "page_title": "BEIJING CHINA-International Web Portal of Beijing",
+    "page_loaded": true
+  },
+  {
+    "city": "Shanghai",
+    "url_bar": "english.shanghai.gov.cn",
+    "page_title": "SHANGHAI CHINA-International Services Shanghai",
+    "page_loaded": true,
+    "browser_error": ""
+  },
+  {
+    "city": "Tianjin",
+    "url_bar": "en.tj.gov.cn",
+    "page_title": "Tianjin Municipal People's Government",
+    "page_loaded": true,
+    "browser_error": ""
+  },
+  {
+    "city": "Chongqing",
+    "url_bar": "english.cq.gov.cn",
+    "page_title": "CHONGQING · CHINA",
+    "page_loaded": true,
+    "browser_error": "",
+    "note": "The page finished loading after the initial polling interval; actual page title and content were then checked."
+  }
+]

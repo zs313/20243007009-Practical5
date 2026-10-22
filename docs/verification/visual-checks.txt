@@ -1,0 +1,4 @@
+PASS: Beijing title, rendered screen, scroll gesture; Visit site remains at (42, 2172, 1038, 2319)
+PASS: Shanghai title, rendered screen, scroll gesture; Visit site remains at (42, 2172, 1038, 2319)
+PASS: Chongqing title, rendered screen, scroll gesture; Visit site remains at (42, 2172, 1038, 2319)
+PASS: Tianjin title, rendered screen, scroll gesture; Visit site remains at (42, 2172, 1038, 2319)

@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.PracticalFive" parent="Base.Theme.PracticalFive">
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

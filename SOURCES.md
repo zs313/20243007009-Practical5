@@ -23,7 +23,7 @@ Sources checked on **22 October 2026**. No changing population, economic or visi
 - [Geography, Chongqing municipal government](https://english.cq.gov.cn/aboutchongqing/overview/Geography/): upper Yangtze, river confluence, mountain landscape, karst features, urban/rural extent and regional functions.
 - [Chongqing municipal government English portal](https://english.cq.gov.cn/index.html): municipality status and industry/transport context.
 - Visit site destination: [Chongqing municipal government English portal](https://english.cq.gov.cn/).
-- Verification limitation: official pages and current content were discoverable in the search index, but direct retrieval repeatedly timed out in the research web tool. This is a reachability limitation of this check, not proof that the URL is invalid. The alternative [iChongqing portal](https://www.ichongqing.info/) fetched successfully and is operated by the Western China International Communication Organization; it is not the municipal government portal.
+- The research web tool initially timed out, but the English municipal government homepage subsequently loaded successfully in the emulator's Chrome browser after pressing the app's Visit site button. Its title was **CHONGQING · CHINA**. See [the device verification](TESTING.md).
 
 ## Tianjin
 
@@ -34,6 +34,5 @@ Sources checked on **22 October 2026**. No changing population, economic or visi
 
 ## Website check notes
 
-- Shanghai and Tianjin homepages fetched successfully on the check date.
-- Beijing English fact pages fetched successfully; its English homepage timed out once, while its Chinese government homepage fetched successfully.
-- Test each in-app button separately using the device browser. A successful ACTION_VIEW launch verifies the Android intent; network page loading is a separate check.
+- All four in-app buttons were separately tested in the emulator's Chrome browser, and all four official homepages loaded successfully on the check date. Beijing, Shanghai, Tianjin and Chongqing address bars and page content were checked.
+- Browser page loading was checked separately from the automated ACTION_VIEW contract tests; screenshots and results are in [TESTING.md](TESTING.md).
