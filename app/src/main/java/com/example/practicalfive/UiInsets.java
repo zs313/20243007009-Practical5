@@ -5,7 +5,7 @@ import android.os.Build;
 import android.view.View;
 import android.view.WindowInsets;
 
-/** Keeps XML content clear of system bars and display cutouts on edge-to-edge screens. */
+/** Keeps XML content clear of system bars, display cutouts and the keyboard on edge-to-edge screens. */
 final class UiInsets {
     private UiInsets() { }
 
@@ -26,7 +26,8 @@ final class UiInsets {
         root.setOnApplyWindowInsetsListener((view, insets) -> {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 android.graphics.Insets safe = insets.getInsets(
-                        WindowInsets.Type.systemBars() | WindowInsets.Type.displayCutout());
+                        WindowInsets.Type.systemBars() | WindowInsets.Type.displayCutout()
+                                | WindowInsets.Type.ime());
                 view.setPadding(safe.left, safe.top, safe.right, safe.bottom);
             } else {
                 view.setPadding(insets.getSystemWindowInsetLeft(), insets.getSystemWindowInsetTop(),
